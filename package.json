@@ -1,0 +1,10 @@
+{
+	"name": "d3js",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "anton-mladenov <tonkata@mail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"d3": "^5.7.0"
+	}
+}
