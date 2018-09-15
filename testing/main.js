@@ -1,31 +1,31 @@
 
-d3.select("h1").style("color", "red")
+d3.select("h2").style("color", "red")
 
-// javascript
-var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
+let dataset = [90, 20, 70, 160, 35, 190, 70, 50, 30, 100, 230, 40, 60, 95, 70, 140]
 
-var svgWidth = 500;
-var svgHeight = 300
-var barPadding = 5;
-var barWidth = (svgWidth / dataset.length);
+let svgHeight = 350
+let svgWidth = 500
+let barPadding = 5
+let barWidth = (svgWidth / dataset.length)
 
-
-var svg = d3.select('svg')
+let svg = d3.select("svg")
+	.attr("height", svgHeight)
 	.attr("width", svgWidth)
-	.attr("height", svgHeight);
+	.attr("class", "bar-chart")
 
-var barChart = svg.selectAll("rect")
+let barChart = svg.selectAll("rect")
 	.data(dataset)
 	.enter()
 	.append("rect")
-	.attr("y", function (d) {
+	.attr("y", (d) => {
 		return svgHeight - d
 	})
-	.attr("height", function (d) {
-		return d;
+	.attr("height", (d) => {
+		return d
 	})
 	.attr("width", barWidth - barPadding)
-	.attr("transform", function (d, i) {
-		var translate = [barWidth * i, 0];
-		return "translate(" + translate + ")";
-	});
+	.attr("transform", (d, i) => {
+		let translate = [barWidth * i, 0]
+		return `translate(` + translate + `)`
+	})
+
