@@ -1,36 +1,56 @@
-// first linear graph example
-let dataset = [90, 20, 70, 160, 35, 230, 190, 70, 50, 30, 100, 40, 60, 95, 70, 140]
 
-let svgHeight = 350
-let svgWidth = 500
+// // drawing lines inside SVG element
+// let svgHeight = 550
+// let svgWidth = 850
 
-let svg = d3.select("svg")
-	.attr("width", svgWidth)
-	.attr("height", svgHeight)
+// let svg = d3.select("body")
+// 	.append("svg")
+// 	.attr("height", svgHeight)
+// 	.attr("width", svgWidth)
+// 	.attr("class", "styleOrange")
 
-let xScale = d3.scaleLinear()
-	.domain([0, d3.max(dataset)])
-	.range([0, svgWidth])
+// let line = svg.append("line")
+// 	.attr("x1", 20)
+// 	.attr("y1", 550)
+// 	.attr("x2", 425)
+// 	.attr("y2", 275)
+// 	.attr("stroke", "black")
+// 	.attr("stroke-width", 5)
 
-let yScale = d3.scaleLinear()
-	.domain([0, d3.max(dataset)])
-	.range([svgHeight, 0])
 
-let x_axis = d3.axisBottom()
-	.scale(xScale)
+// // first linear graph example
+// let dataset = [90, 20, 70, 160, 35, 230, 190, 70, 50, 30, 100, 40, 60, 95, 70, 140]
 
-let y_axis = d3.axisLeft()
-	.scale(yScale)
+// let svgHeight = 350
+// let svgWidth = 500
 
-svg.append("g")
-	.attr("transform", "translate(50, 10)")
-	.call(y_axis)
+// let svg = d3.select("svg")
+// 	.attr("width", svgWidth)
+// 	.attr("height", svgHeight)
 
-let xAxisTranslate = svgHeight - 20
+// let xScale = d3.scaleLinear()
+// 	.domain([0, d3.max(dataset)])
+// 	.range([0, svgWidth])
 
-svg.append("g")
-	.attr("transform", `translate(50, ${xAxisTranslate})`)
-	.call(x_axis)
+// let yScale = d3.scaleLinear()
+// 	.domain([0, d3.max(dataset)])
+// 	.range([svgHeight, 0])
+
+// let x_axis = d3.axisBottom()
+// 	.scale(xScale)
+
+// let y_axis = d3.axisLeft()
+// 	.scale(yScale)
+
+// svg.append("g")
+// 	.attr("transform", "translate(50, 10)")
+// 	.call(y_axis)
+
+// let xAxisTranslate = svgHeight - 20
+
+// svg.append("g")
+// 	.attr("transform", `translate(50, ${xAxisTranslate})`)
+// 	.call(x_axis)
 
 // // this example takes the dataset given and for each data element creates a P element
 // // then for each element it prints the element in descending order

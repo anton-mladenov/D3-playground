@@ -7,6 +7,14 @@ html, body {
     background-color: #C7D9D9;
 }
 
+.styleOrange {
+    background-color: orange;
+}
+
+.line {
+	background-color: black;
+}
+
 .bar {
      fill: #115D8C;
      }
