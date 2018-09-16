@@ -1,34 +1,80 @@
 
-// drawing lines, rectangles and circles inside SVG element
-let svgHeight = 550
-let svgWidth = 850
+// // creating pie chart 
+// var data = [
+// 	{ "platform": "Android", "percentage": 40.11 },
+// 	{ "platform": "Windows", "percentage": 36.69 },
+// 	{ "platform": "iOS", "percentage": 13.06 }
+// ];
 
-let svg = d3.select("body")
-	.append("svg")
-	.attr("height", svgHeight)
-	.attr("width", svgWidth)
-	.attr("class", "styleOrange")
+// var svgWidth = 500, svgHeight = 300, radius = Math.min(svgWidth, svgHeight) / 2;
+// var svg = d3.select('svg')
+// 	.attr("width", svgWidth)
+// 	.attr("height", svgHeight);
 
-let line = svg.append("line")
-	.attr("x1", 20)
-	.attr("y1", 550)
-	.attr("x2", 425)
-	.attr("y2", 275)
-	.attr("stroke", "black")
-	.attr("stroke-width", 5)
+// //Create group element to hold pie chart    
+// var g = svg.append("g")
+// 	.attr("transform", "translate(" + radius + "," + radius + ")");
 
-let rectangle = svg.append("rect")
-	.attr("x", 200)
-	.attr("y", 100)
-	.attr("width", 600)
-	.attr("height", 100)
-	.attr("fill", "green")
+// var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-let circle = svg.append("circle")
-	.attr("cx", 400)
-	.attr("cy", 300)
-	.attr("r", 150)
-	.attr("fill", "black")
+// var pie = d3.pie().value(function (d) {
+// 	return d.percentage;
+// });
+
+// var path = d3.arc()
+// 	.outerRadius(radius)
+// 	.innerRadius(0);
+
+// var arc = g.selectAll("arc")
+// 	.data(pie(data))
+// 	.enter()
+// 	.append("g");
+
+// arc.append("path")
+// 	.attr("d", path)
+// 	.attr("fill", function (d) { return color(d.data.percentage); });
+
+// var label = d3.arc()
+// 	.outerRadius(radius)
+// 	.innerRadius(0);
+
+// arc.append("text")
+// 	.attr("transform", function (d) {
+// 		return "translate(" + label.centroid(d) + ")";
+// 	})
+// 	.attr("text-anchor", "middle")
+// 	.text(function (d) { return d.data.platform + ":" + d.data.percentage + "%"; });
+
+// // drawing lines, rectangles and circles inside SVG element
+// let svgHeight = 550
+// let svgWidth = 850
+
+// let svg = d3.select("body")
+// 	.append("svg")
+// 	.attr("height", svgHeight)
+// 	.attr("width", svgWidth)
+// 	.attr("class", "styleOrange")
+
+// let line = svg.append("line")
+// 	.attr("x1", 20)
+// 	.attr("y1", 550)
+// 	.attr("x2", 425)
+// 	.attr("y2", 275)
+// 	.attr("stroke", "black")
+// 	.attr("stroke-width", 5)
+
+// let rectangle = svg.append("rect")
+// 	.attr("x", 200)
+// 	.attr("y", 100)
+// 	.attr("width", 600)
+// 	.attr("height", 100)
+// 	.attr("fill", "green")
+
+// let circle = svg.append("circle")
+// 	.attr("cx", 400)
+// 	.attr("cy", 300)
+// 	.attr("r", 150)
+// 	.attr("fill", "black")
 
 // // first linear graph example
 // let dataset = [90, 20, 70, 160, 35, 230, 190, 70, 50, 30, 100, 40, 60, 95, 70, 140]
