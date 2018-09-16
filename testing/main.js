@@ -1,22 +1,34 @@
 
-// // drawing lines inside SVG element
-// let svgHeight = 550
-// let svgWidth = 850
+// drawing lines, rectangles and circles inside SVG element
+let svgHeight = 550
+let svgWidth = 850
 
-// let svg = d3.select("body")
-// 	.append("svg")
-// 	.attr("height", svgHeight)
-// 	.attr("width", svgWidth)
-// 	.attr("class", "styleOrange")
+let svg = d3.select("body")
+	.append("svg")
+	.attr("height", svgHeight)
+	.attr("width", svgWidth)
+	.attr("class", "styleOrange")
 
-// let line = svg.append("line")
-// 	.attr("x1", 20)
-// 	.attr("y1", 550)
-// 	.attr("x2", 425)
-// 	.attr("y2", 275)
-// 	.attr("stroke", "black")
-// 	.attr("stroke-width", 5)
+let line = svg.append("line")
+	.attr("x1", 20)
+	.attr("y1", 550)
+	.attr("x2", 425)
+	.attr("y2", 275)
+	.attr("stroke", "black")
+	.attr("stroke-width", 5)
 
+let rectangle = svg.append("rect")
+	.attr("x", 200)
+	.attr("y", 100)
+	.attr("width", 600)
+	.attr("height", 100)
+	.attr("fill", "green")
+
+let circle = svg.append("circle")
+	.attr("cx", 400)
+	.attr("cy", 300)
+	.attr("r", 150)
+	.attr("fill", "black")
 
 // // first linear graph example
 // let dataset = [90, 20, 70, 160, 35, 230, 190, 70, 50, 30, 100, 40, 60, 95, 70, 140]
